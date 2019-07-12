@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"*.txt": "markdown",
+		"*.qss": "css",
+		"winuser.h": "c"
+	}
+}

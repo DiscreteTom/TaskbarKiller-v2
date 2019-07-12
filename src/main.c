@@ -5,6 +5,8 @@ const int HOTKEY_ID = 1;
 
 int main(int argc, char **argv)
 {
+	HWND tbHdl = FindWindow("Shell_TrayWnd", NULL); // handle of taskbar
+	int hiden = 0;																	 // taskbar is hidden?
 	if (RegisterHotKey(
 					NULL, // this thread will process the hotkey
 					HOTKEY_ID,
@@ -15,11 +17,15 @@ int main(int argc, char **argv)
 	}
 
 	MSG msg = {0};
-	while (GetMessage(&msg, NULL, 0, 0) != 0){
-		if (msg.message == WM_HOTKEY)
+	while (GetMessage(&msg, NULL, 0, 0) != 0) // while msg is not WM_QUIT
+	{
+		if (msg.message == WM_HOTKEY) // process hot key
 		{
-			// process hot key
-			printf("hot key pressed\n");
+			hiden = !hiden;
+			if (hiden)
+				ShowWindow(tbHdl, 0); //hide taskbar
+			else
+				ShowWindow(tbHdl, 1); //show taskbar
 		}
 	}
 

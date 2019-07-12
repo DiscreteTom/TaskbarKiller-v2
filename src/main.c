@@ -6,8 +6,8 @@ const int HOTKEY_ID = 1;
 int main(int argc, char **argv)
 {
 	if (RegisterHotKey(
-					NULL, // this thread
-					HOTKEY_ID, // hot key id
+					NULL, // this thread will process the hotkey
+					HOTKEY_ID,
 					MOD_WIN,
 					VK_OEM_3)) // ~
 	{

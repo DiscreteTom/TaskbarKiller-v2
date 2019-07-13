@@ -1,5 +1,6 @@
 #include <winuser.h>
-#include <stdio.h>
+
+#pragma comment( linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"" )
 
 const int HOTKEY_ID = 1;
 
@@ -13,7 +14,7 @@ int main(int argc, char **argv)
 					MOD_WIN,
 					VK_OEM_3)) // ~
 	{
-		printf("hot key registered\n");
+		// printf("hot key registered\n");
 	}
 
 	MSG msg = {0};

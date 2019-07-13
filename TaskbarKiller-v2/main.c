@@ -1,4 +1,5 @@
-#include <winuser.h>
+#include <WinUser.h>
+#include <Windows.h>
 
 #pragma comment( linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"" )
 

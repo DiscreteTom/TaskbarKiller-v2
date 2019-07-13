@@ -31,4 +31,5 @@ int main(int argc, char **argv)
 	}
 
 	UnregisterHotKey(NULL, HOTKEY_ID);
+	ShowWindow(tbHdl, 1); // show taskbar at last
 }

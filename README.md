@@ -1,6 +1,6 @@
 # TaskbarKiller-v2
 
-No GUI, simpler than [TaskbarKiller](https://github.com/DiscreteTom/TaskBarKiller).
+No GUI, no icon, simpler than [TaskbarKiller](https://github.com/DiscreteTom/TaskBarKiller).
 
 ## Usage
 

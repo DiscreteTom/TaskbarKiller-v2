@@ -15,7 +15,7 @@ int main(int argc, char** argv)
 	// get taskbar handle
 	HWND taskbar = FindWindow("Shell_TrayWnd", NULL);
 #ifdef _DEBUG
-	printf("taskbar handle: %d\n", taskbar);
+	printf("taskbar handle: %p\n", taskbar);
 #endif
 
 	// register hot key
